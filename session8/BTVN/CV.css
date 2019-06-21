@@ -1,0 +1,160 @@
+.profile{
+	font-family: Verdana , Arial , Helvetica , sans-serif;
+	width: 80%;
+	margin: 20px auto;
+}
+.div1-1{
+	width: 15%;
+	height: 160px;
+	float: left;
+	background-color: #03A9F4;
+}
+.div2-1{
+	width: 77%;
+	height: 160px;
+	background-color: yellow;
+	float: left;
+	
+}
+.div2-1 img{
+	width: 20px;
+	float: left;
+}
+.div2-1 ul li{
+	margin-top: 8px;
+	list-style-type: none;
+	font-size: 18px;
+}
+.div1-2{
+	width: 15%;
+	height: 135px;
+	float: left;
+	background-color: #03A9F4;
+	margin-top: 10px;
+	color: white;
+    line-height: 46px;
+    font-size: 20px;
+    text-align: center;
+}
+.div2-2{
+	width: 77%;
+	height: 135px;
+	float: left;
+	padding-left: 35px;
+	margin-top: 10px;
+	line-height: 35px;
+}
+.div1-3{
+	width: 15%;
+	height: 135px;
+	float: left;
+	background-color: #03A9F4;
+	margin-top: 10px;
+	font-size: 20px;
+    color: white;
+    line-height: 135px;
+    text-align: center;
+}
+.div2-3{
+	width: 75%;
+	height: 135px;
+	float: left;
+	padding-left: 47px;
+	margin-top: 10px;
+	line-height: 35px;
+}
+.div1-4{
+	width: 15%;
+	height: 135px;
+	float: left;
+	background-color: #03A9F4;
+	margin-top: 10px;
+	font-size: 20px;
+    color: white;
+    line-height: 135px;
+    text-align: center;
+}
+.div2-4{
+	width: 77%;
+	height: 135px;
+	float: left;
+	margin-top: 10px;
+	padding-left: 10px;
+}
+.div2-4 ul li{
+	list-style-type: none;
+}
+.div1-5{
+	width: 15%;
+	height: 600px;
+	float: left;
+	background-color: #03A9F4;
+	margin-top: 10px;
+	font-size: 20px;
+    color: white;
+    line-height: 60px;
+    text-align: center;
+}
+.div2-5{
+	width: 77%;
+	height: 610px;
+	float: left;
+}
+  .position{
+	height: 80px;
+	background-color: yellow;
+	margin-top: 10px;
+    font-weight: bold;
+    color: #03A9F4;
+    list-style-type: none;
+}
+.senior{
+	height: 80px;
+	background-color: yellow;
+	font-weight: bold;
+	color: #03A9F4;
+	list-style-type: none;
+}
+.research{
+	height: 158px;
+}
+.div1-6{
+	width: 15%;
+	height: 50px;
+	float: left;
+	background-color: #03A9F4;
+	color: white;
+	text-align: center;
+	line-height: 50px;
+	font-size: 20px;
+}
+.div2-6{
+	width: 73%;
+	height: 50px;
+	float: left;
+	background-color: yellow;
+    font-weight: bold;
+    color: #03A9F4;
+    line-height: 50px;
+    padding-left: 40px;
+}
+.div1-7{
+	width: 15%;
+	height: 65px;
+	float: left;
+	background-color: #03A9F4;
+	margin-top: 10px;
+	color: white;
+	text-align: center;
+	line-height: 65px;
+	font-size: 20px;
+}
+.div2-7{
+	width: 77%;
+	height: 65px;
+	float: left;
+	margin-top: 10px;
+	padding-left: 40px;
+	line-height: 65px;
+}
+

@@ -1,0 +1,104 @@
+body{
+	font-family: Verdana , Arial , Helvetica , sans-serif;
+	width: 990px;
+	margin: 15px auto;
+	padding: 15px 0;
+	border: 1px solid black;
+}
+.menu ul {
+	list-style-type: none;
+	position: relative;
+	border-bottom: 2px solid #f2972e;
+	border-top: 2px solid #f2972e
+}
+.menu li{
+	list-style-type: none;
+	margin-bottom: 50px;
+	background-color: white;
+	float: left;
+	position: relative;
+	border-right: 2px solid black;
+	
+}
+.menu li a{
+	width: 200px;
+	text-align: center;
+	display: block;
+	padding: 20px 0;
+	color: green;
+	font-weight: bold;
+	font-size: 17px;
+	position: relative;
+}
+.menu ul li a:hover{
+	color: yellow;
+}
+header{
+	padding-bottom: 20px;
+	
+}
+header img {
+	margin-left: 20px;
+	float: left;
+}
+header h2{
+	font-size: 40px;
+	color: #f2972e;
+	margin-left: 120px;
+	margin-bottom: 25px;
+	text-align: center;
+}
+header h3{
+	font-size: 130%;
+	font-style: italic;
+	margin-left: 120px;
+	color: green;
+	text-align: center;
+}
+section{
+	width: 55%;
+	margin-left: 20px;
+	padding-right: 25px;
+	display: table;
+	float: left;
+}
+section h1{
+	font-size: 30px;
+	margin-bottom: 25px;
+}
+section h2{
+	font-size: 20px;
+	margin-bottom: 25px;
+}
+aside{
+	width: 30%;
+	padding: 20px;
+	background-color: #ffebc6;
+	margin-right: 20px;
+	display: table;
+	float: right;
+}
+aside h2{
+	 font-size: 20px;
+	 margin-bottom: 10px;
+}
+aside h3{
+	font-size: 20px;
+	color: #931420;
+	margin-bottom: 10px;
+}
+aside p{
+	margin-bottom: 10px;
+}
+footer{
+	clear: both;
+	border-top: 2px solid #f2972e;
+	padding-top: 7px;
+}
+footer p{
+	font-size: 10px;
+	text-align: right;
+	margin-right: 20px;
+	font-style: italic;
+
+}

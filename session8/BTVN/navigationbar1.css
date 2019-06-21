@@ -1,0 +1,49 @@
+.menu{
+	margin: 20px auto;
+	width: 90%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+ul li{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: #5d5c5a;
+	float: left;
+	position: relative;
+}
+  ul li  a{
+ 	width: 133px;
+	text-align: center;
+	display: inline-block;
+	padding: 20px 0;
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	font-size: 14px;
+}
+ li a:hover{
+	background-color: #ff5722;
+}
+.hover{
+	background-color: #ff5722;
+}
+ul li > .service1{
+	display: none;
+	position: absolute;
+	top: 0;
+    left:  -30%;
+}
+ul li:hover > .service1{
+	display: block;
+}
+ul li > .service2{
+	display: none;
+	position: absolute;
+	padding-top: 0;
+  	left: 70.5%;
+    top: 0;
+}
+ul li:hover > .service2{
+	display: block;
+}
+
