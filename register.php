@@ -14,18 +14,38 @@
       </ol>
     </section>
     <?php 
+    	include 'connect.php';
       $errClassName = $errClassEmail = '';
       $errTextName = $errTextEmail = '';
       $name = $emai = '';
       if (isset($_POST['register'])) {
         $name  = $_POST['name'];
         $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $city = $_POST['city'];
+        $birthday = $_POST['birthday'];
+        // chuyen dinh dang bithday sang Nam-thang-ngay
+        $birthday = date("Y-m-d", strtotime($birthday));
+        $gender = isset($_POST['gender'])?$_POST['gender']:NULL;
+        $avatar = 'default.png';
+        // avatar
         if ($name == '') {
           $errClassName = 'has-error';
           $errTextName = 'Please input your name';
         }
-
-        
+        if ($name != '' && $email != '') {
+          //upload avatar
+          if ($_FILES['avatar']['error'] == 0) {
+            $avatar = uniqid().'_'.$_FILES['avatar']['name'];
+            move_uploaded_file($_FILES['avatar']['tmp_name'], 'uploads/avatar/'.$avatar);
+          }
+          //
+        	$sql = "INSERT INTO users(name, email, phone, gender, city, birthday, avatar) VALUES ('$name', '$email', '$phone', '$gender', '$city', '$birthday', '$avatar')";
+        	if (mysqli_query($connect, $sql) === TRUE) {
+        		// chuyen trang trong PHP
+        		header("Location: list_user.php");
+        	}
+        }
       }
     ?>
     <!-- Main content -->
@@ -49,31 +69,31 @@
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                  <input type="text" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Phone</label>
-                  <input type="text" class="form-control" id="exampleInputPhone" placeholder="Enter phone">
+                  <input type="text" name="phone" class="form-control" id="exampleInputPhone" placeholder="Enter phone">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputFile">Avatar</label>
-                  <input type="file" id="exampleInputFile">
+                  <input type="file" name="avatar" id="exampleInputFile">
                 </div>
                 <!-- radio -->
                 <div class="form-group">
                   <label>
-                    <input type="radio" name="r1" class="minimal" checked>Male
+                    <input type="radio" name="gender" class="minimal" value="male">Male
                   </label>
                   <label>
-                    <input type="radio" name="r1" class="minimal">Female
+                    <input type="radio" name="gender" class="minimal" value="female">Female
                   </label>
                   <label>
-                    <input type="radio" name="r1" class="minimal">Other
+                    <input type="radio" name="gender" class="minimal" value="other">Other
                 </div>
               </div>
               <div class="form-group">
                 <label>City</label>
-                <select class="form-control select2" style="width: 100%;">
+                <select class="form-control select2" style="width: 100%;" name="city">
                   <option value="">Choose city</option>
                   <option value="Alaska">Alaska</option>
                   <option value="California">California</option>
@@ -87,7 +107,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-                  <input type="text" class="form-control pull-right" id="birthday">
+                  <input type="text" name="birthday" class="form-control pull-right" id="birthday">
                 </div>
                 <!-- /.input group -->
               </div>
