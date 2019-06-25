@@ -1,0 +1,80 @@
+*{
+		font-family: segoe ui light;
+		
+	}
+	.error{
+		color: red;
+		font-size: 15px;
+	}
+	.container{
+		width: 600px;
+		padding: 20px 0px;
+		background: #53e3a6;
+		margin: 0 auto;
+		text-align: center;
+		padding-bottom: 65px;
+	}
+	h1{
+		font-size: 40px;
+   		
+    	color: white;
+	}
+	.row input[type=submit] {
+    background-color: white;
+    border: 0;
+    padding: 10px 15px;
+    color: #53e3a6;
+    border-radius: 3px;
+    width: 200px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 25px;
+	}
+	input[type=text] {
+    border: 0;
+    padding: 10px 15px;
+    color: #70887e;
+    border-radius: 3px;
+    width: 200px;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.2);
+	}
+	input[type=radio]{
+		width: 75px;
+		color: #53e3a6;
+		border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.2);
+	}
+	.row span{
+		width: 120px;
+		text-align: center;
+		display: inline-block;
+		font-size: 18px;
+		font-family: segoe ui ;
+	}
+	 input[type=date]{
+	 	width: 200px;
+    	border-radius: 3px;
+    	font-size: 18px;
+    	color: #4b675b;
+    	margin-top: 10px;
+    	padding: 10px 15px;
+    	border: 0;
+    	border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.2);
+    }
+    .row select{
+    border: 0;
+    padding: 10px 15px;
+    color: #4b675b;
+    border-radius: 3px;
+    width: 231px;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.2);
+    }
+
+
