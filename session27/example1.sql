@@ -17,8 +17,7 @@ WHERE categoryID = 2 AND productName LIKE '%o%'
 ORDER BY productName DESC;
 
 --4. Lấy ra danh sách sản phẩm mà khách hàng sử dụng gmail để mua
- SELECT * FROM products INNER JOIN customers ON products.productID = customers.customerID 
- WHERE customers.emailAddress IS NOT NULL;
+
 
 --5. Lấy ra danh sách sản phẩm có giá lơn hơn 300, đăng năm 2014, giới hạn lấy 4 sản phẩm và sắp xếp theo giảm giá giảm dần
 SELECT categoryID, productName , listPrice , dateAdded FROM products
