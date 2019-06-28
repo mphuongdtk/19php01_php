@@ -16,11 +16,11 @@
     <section class="content">
 	    <?php
 	    	include 'connect.php';
-	    	$sql = "SELECT * FROM products";
+	    	$sql = "SELECT * FROM products_19php";
 	    	$result = mysqli_query($connect, $sql);
 	    ?>
 	     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-10">
           <div class="box">
             <div class="box-header with-border">
               <h3 class="box-title">List products</h3>
@@ -40,6 +40,7 @@
                if ($result->num_rows > 0) {
                	while($row = $result->fetch_assoc()) {
                		$id = $row['id'];
+
                ?>
 	                <tr>
 	                  <td><?php echo $row['id']?></td>

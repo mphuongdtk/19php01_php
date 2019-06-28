@@ -22,7 +22,7 @@
     include 'function/common.php';
     // lay thong tin product can edit ra
     $id = $_GET['id'];
-    $sql = "SELECT * FROM products WHERE id = $id";
+    $sql = "SELECT * FROM products_19php WHERE id = $id";
     $result = mysqli_query($connect, $sql);
     $editProduct = $result->fetch_assoc();
     //
@@ -52,10 +52,10 @@
         $errName = 'Product name exist';
         $checkAdd = false;
       }
-      if ($_FILES['image']['error'] == 0 && $_FILES['image']['size'] > 102400) {
-        $errImage = 'Please select a photo less than 100kb';
-        $checkAdd = false;
-      }
+      // if ($_FILES['image']['error'] == 0 && $_FILES['image']['size'] > 102400) {
+      //   $errImage = 'Please select a photo less than 100kb';
+      //   $checkAdd = false;
+      // }
       //
       if ($checkAdd) {
         // check and upoad image
@@ -69,7 +69,7 @@
           }
         }
         // end image upload
-        $sql = "UPDATE products SET name = '$name', description = '$description', price = '$price', image = '$image' WHERE id = $id";
+        $sql = "UPDATE products_19php SET name = '$name', description = '$description', price = '$price', image = '$image' WHERE id = $id";
         if (mysqli_query($connect, $sql) === TRUE) {
           header("Location: list_product.php");
         } else {

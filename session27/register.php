@@ -17,7 +17,7 @@
     	include 'connect.php';
       $errClassName = $errClassEmail = '';
       $errTextName = $errTextEmail = '';
-      $name = $emai = '';
+      $name = $email = '';
       if (isset($_POST['register'])) {
         $name  = $_POST['name'];
         $email = $_POST['email'];
@@ -39,8 +39,9 @@
             $avatar = uniqid().'_'.$_FILES['avatar']['name'];
             move_uploaded_file($_FILES['avatar']['tmp_name'], 'uploads/avatar/'.$avatar);
           }
+        
           //
-        	$sql = "INSERT INTO users(name, email, phone, gender, city, birthday, avatar) VALUES ('$name', '$email', '$phone', '$gender', '$city', '$birthday', '$avatar')";
+        	$sql = "INSERT INTO users_19php (name, email, phone, gender, city, birthday, avatar) VALUES ('$name', '$email', '$phone', '$gender', '$city', '$birthday', '$avatar')";
         	if (mysqli_query($connect, $sql) === TRUE) {
         		// chuyen trang trong PHP
         		header("Location: list_user.php");
@@ -69,11 +70,11 @@
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email</label>
-                  <input type="text" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                  <input type="text" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" value="<?php echo $email;?>">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Phone</label>
-                  <input type="text" name="phone" class="form-control" id="exampleInputPhone" placeholder="Enter phone">
+                  <input type="text" name="phone" class="form-control" id="exampleInputPhone" placeholder="Enter phone" value="<?php echo $phone; ?>">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputFile">Avatar</label>
@@ -89,6 +90,7 @@
                   </label>
                   <label>
                     <input type="radio" name="gender" class="minimal" value="other">Other
+                  </label>
                 </div>
               </div>
               <div class="form-group">

@@ -40,10 +40,10 @@
         $errName = 'Product name exist';
         $checkAdd = false;
       }
-      if ($_FILES['image']['error'] == 0 && $_FILES['image']['size'] > 102400) {
-        $errImage = 'Please select a photo less than 100kb';
-        $checkAdd = false;
-      }
+      // if ($_FILES['image']['error'] == 0 && $_FILES['image']['size'] > 102400) {
+      //   $errImage = 'Please select a photo less than 100kb';
+      //   $checkAdd = false;
+      // }
       //
       if ($checkAdd) {
         // check and upoad image
@@ -52,7 +52,7 @@
           move_uploaded_file($_FILES['image']['tmp_name'], 'uploads/products/'.$image);
         }
         // end image upload
-        $sql = "INSERT INTO products(name, description, price, image, created) VALUES ('$name', '$description', $price, '$image', '$created')";
+        $sql = "INSERT INTO products_19php(name, description, price, image, created) VALUES ('$name', '$description', $price, '$image', '$created')";
         if (mysqli_query($connect, $sql) === TRUE) {
           header("Location: list_product.php");
         } else {
@@ -64,7 +64,7 @@
     <!-- Main content -->
     <section class="content">
 	     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
           <!-- general form elements -->
           <div class="box box-primary">
             <div class="box-header with-border">

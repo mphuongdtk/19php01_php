@@ -17,7 +17,7 @@
     	include 'connect.php';
       // lay thong tin cu cua user can edit
       $id = $_GET['id'];
-      $sql = "SELECT * FROM users WHERE id = $id";
+      $sql = "SELECT * FROM users_19php WHERE id = $id";
       $editUser = mysqli_query($connect, $sql);
       $editUserDetail = $editUser->fetch_assoc();
       // ket thuc
@@ -46,7 +46,7 @@
             move_uploaded_file($_FILES['avatar']['tmp_name'], 'uploads/avatar/'.$avatar);
           }
           //
-        	$sql = "UPDATE users SET name = '$name', email = '$email' WHERE id = $id";
+        	$sql = "UPDATE users_19php SET name = '$name', email = '$email' , phone = '$phone', city = '$city', birthday = '$birthday' , gender = '$gender', avatar = '$avatar' WHERE id = $id";
         	if (mysqli_query($connect, $sql) === TRUE) {
         		// chuyen trang trong PHP
         		header("Location: list_user.php");
